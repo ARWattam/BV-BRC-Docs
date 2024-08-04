@@ -1,31 +1,25 @@
 # Similar Genome Finder Service
 
-*Revised: 1/25/2022*
+*Revised: 04 August 2024*
 
-When a researcher has a new genome sequence, one of the first things they want to identify is the closest relatives of their genome. BV-BRC provides a new service that allows researchers to do this using Mash/MinHash[1]. Mash reduces large sequences and sequence-sets to small, representative sketches, from which global mutation distances can be rapidly estimated. The MinHash dimensionality-reduction technique to include a pairwise mutation distance and P value significance test, enabling the efficient clustering and search of massive sequence collections.
+When a researcher has a new genome sequence, one of the first things they want to identify is the closest relatives of their genome. BV-BRC[1] provides a new service that allows researchers to do this using Mash/MinHash[2]. Mash reduces large sequences and sequence-sets to small, representative sketches, from which global mutation distances can be rapidly estimated. The MinHash dimensionality-reduction technique to include a pairwise mutation distance and P value significance test, enabling the efficient clustering and search of massive sequence collections.
 
-1.	At the top of any BV-BRC page, find the Services tab. Click on Similar Genome Finder. 
+1.	At the top of any BV-BRC page, find the **Services** tab. Click on **Similar Genome Finder**. 
 ![Figure 1](./images/Picture1.png "Figure 1") 
 
 2.	This will open up the Similar Genome Finder landing page.
 ![Figure 2](./images/Picture2.png "Figure 2") 
 
-## Loading a BV-BRC genome 
-
-1\.	To load a genome that has been privately annotated BV-BRC, click on the filter icon that is at the left side of the text box under **Search By Genome Name Or Genome ID**.
+3. **Enabling Filter to Locate Genomes of Interest.**  Click on the filter icon that is at the left side of the text box under **Search By Genome Name Or Genome ID**.  This will open a box that allows a researcher to search across all of the **Public Genomes** available in BV-BRC or across the **Private Genomes** that have been annotated and are stored in the private workspace. The search can be further refined to search to a **Genome Type** which includes **Bacteria**, **Viruses** or **Eukaryotes**. To select private genomes, click on **My Genomes** under **Private Genomes**. 
 ![Figure 3](./images/Picture3.png "Figure 3") 
 
-2\.	This will open a box that allows a researcher to search across all of the public genomes available in BV-BRC, or across the genomes that they have annotated and that are stored in their private workspace. To select private genomes, deselect the Public Genomes box. This will leave the Private Genomes box selected. The filter can be used to narrow the search for each of the categories.
-
-![Figure 4](./images/Picture4.png "Figure 4") 
-
-3\.	Click the down arrow at the right of the text box under **Search By Genome Name Or Genome ID**. This will open a drop-down box that shows all of the researcher’s private genomes, which have a lock icon in front of them.  To select a specific genome, scroll down and find the genome of interest, and then click on it.
+4.	Click the down arrow at the right of the text box under **Search By Genome Name Or Genome ID**. This will open a drop-down box that shows all of the researcher’s private genomes, which have a **Lock** icon in front of them.  To select a specific genome, scroll down and find the genome of interest, and then click on it.
 ![Figure 5](./images/Picture5.png "Figure 5")
 
-4\.	This will autofill the name of the genome in the text box. To see options that can be adjusted, click on the down arrow to the right of Advanced Options.
+5.	This will autofill the name of the genome in the text box. To see options that can be adjusted, click on the down arrow to the right of Advanced Options.
 ![Figure 6](./images/Picture6.png "Figure 6") 
 
-5\.	Alternatively, it is not necessary to use the filters for different types of public genomes, or the private genomes.  Entering the name, or the genome ID in the text box will open a drop-down box that shows possible matches.  Note that reference genomes are denoted with a **[Ref]** in front of the name.  Representative genomes would have a **[Rep]** and private genomes have the lockbox icon seen above.  All of the other public genomes have no indicator in front of the name.  Clicking on the genome of interest will autofill the box as seen above.
+6.	Alternatively, it is not necessary to use the filters for different types of public genomes, or the private genomes.  Entering the name, or the genome ID in the text box will open a drop-down box that shows possible matches.  Note that reference genomes are denoted with a **[Ref]** in front of the name.  Representative genomes would have a **[Rep]** and private genomes have the lockbox icon seen above.  All of the other public genomes have no indicator in front of the name.  Clicking on the genome of interest will autofill the box as seen above.
 ![Figure 7](./images/Picture7.png "Figure 7") 
 
 ## Loading a genome that is not in BV-BRC
@@ -62,7 +56,7 @@ When a researcher has a new genome sequence, one of the first things they want t
 Mash reduces large sequences and sequence-sets to small, representative sketches, from which global mutation distances can be rapidly estimated. The Mash distance approximates the mutation rate.  You can select the distance by clicking on the down arrow that follows the text box under **Distance**. Smaller numbers indicate a closer relationship. Additional information on how distance is calculated for Mash is available here: https://mash.readthedocs.io/en/latest/distances.html.
 ![Figure 17](./images/Picture17.png "Figure 17") 
 
-4\.	Searches against the NCBI reference and representative genome dataset (https://www.ncbi.nlm.nih.gov/refseq/about/prokaryotes/) or all of the public genomes available in BV-BRC.  Selection of the database is available under **Scope**.
+4\.	4.	Searches can be narrowed by **Organism Type**, selecting between **Bacterial and archaeal genomes**, **Viral genomes**, or both. The **Scope** can also be selected with filters for **All public genomes** or the **Reference and representative genomes**. The searches against the NCBI reference and representative genome dataset (https://www.ncbi.nlm.nih.gov/refseq/about/prokaryotes/) is used when this is selected.
 ![Figure 18](./images/Picture18.png "Figure 18") 
 
 ## Submitting the job
@@ -75,7 +69,7 @@ Mash reduces large sequences and sequence-sets to small, representative sketches
 1\.	The tool will return the top hits to the selected genome.  The page will include a reference to the data that was submitted for analysis, as well as the table.  The entire table can be downloaded by clicking on the **Download** icon at the top upper right of the table.
 ![Figure 20](./images/Picture20.png "Figure 20") 
 
-2\.	The table also includes the metadata for the genomes, which includes the country of isolation, any host that the genome was isolated from, the year the strain was collected, and the data that it was completed.  Also included are the distance and P values, and the number of K-mers, out of 1000 total, that the genome shared with the submitted genome.
+2\.	The table also includes the metadata for the genomes, which includes the country of isolation, any host that the genome was isolated from, the year the strain was collected, and the data that it was completed.  Also included are the **Distance**, **P values**, and the **K-mer Count** (number out of 1000 total) that the genome shared with the submitted genome.
 ![Figure 21](./images/Picture21.png "Figure 21") 
 
 3\.	To see information on an individual genome, click on the check box preceding it in the first column.  This will populate the box to the right of the vertical green bar with the information that BV-BRC has on that particular genome.
@@ -94,5 +88,6 @@ Mash reduces large sequences and sequence-sets to small, representative sketches
 
 ## References
 
-1.	Ondov, B.D., et al., Mash: fast genome and metagenome distance estimation using MinHash. Genome biology, 2016. 17(1): p. 1-14.
+1.Olson, R.D., et al., Introducing the Bacterial and Viral Bioinformatics Resource Center (BV-BRC): a resource combining PATRIC, IRD and ViPR. Nucleic acids research, 2023. 51(D1): p. D678-D689.
+2.	Ondov, B.D., et al., Mash: fast genome and metagenome distance estimation using MinHash. Genome biology, 2016. 17(1): p. 1-14.
 
